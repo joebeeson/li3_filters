@@ -1,10 +1,6 @@
 <?php
 
-	// Retrieve required libraries.
-
 	/**
-	 * dates.php
-	 *
 	 * Filter for automatically adding `created` and `modified` dates
 	 * for records.
 	 *

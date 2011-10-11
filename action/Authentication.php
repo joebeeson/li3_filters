@@ -13,7 +13,7 @@
 	 *
 	 * @author Joe Beeson <jbeeson@gmail.com>
 	 */
-	Filters::apply('lithium\action\Dispatcher', '_callable', function($self, $params, $chain) {
+	return function($self, $params, $chain) {
 		$controller = $chain->next($self, $params, $chain);
 		if (lithium\security\Auth::check('user') or $controller->invokeMethod('_isAllowedAction')) {
 
@@ -35,4 +35,4 @@
 				return new lithium\action\Response(array('location' => 'Users::login'));
 			};
 		}
-	});
+	};

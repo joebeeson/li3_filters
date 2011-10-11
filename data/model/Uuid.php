@@ -4,8 +4,6 @@
 	use lithium\util\String;
 
 	/**
-	 * uuid.php
-	 *
 	 * Filter for automatically creating UUIDs for models that employ
 	 * them for primary keys.
 	 *
