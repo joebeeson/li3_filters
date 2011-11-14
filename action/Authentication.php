@@ -14,11 +14,10 @@
 	 * @author Joe Beeson <jbeeson@gmail.com>
 	 */
 	return function($self, $params, $chain) {
-		$controller = $chain->next($self, $params, $chain);
 		if (lithium\security\Auth::check('user') or $controller->invokeMethod('_isAllowedAction')) {
 
 			// Action is cleared for the user, cheers.
-			return $controller;
+			return $chain->next($self, $params, $chain);;
 		} else {
 
 			/**
